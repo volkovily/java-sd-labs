@@ -8,7 +8,7 @@ public class Lab1 {
         int a = 1;
         int b = 1;
 
-        if (n <= a || m <= b || n <= 0 || m <= 0) {
+        if (n < a || m < b || a < 0) {
             System.err.println("Invalid parameter values");
             return;
         }
