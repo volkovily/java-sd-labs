@@ -4,14 +4,14 @@ public class Lab2 {
         try {
             short[][] matrixA = {
                     {1, 2, 3},
-                    {4, 5, 6}
+                    {2, 3, 1}
             };
             short[][] matrixB = {
                     {1, 6},
                     {0, 1}
             };
 
-            if (!isValidMatrix(matrixA) || !isValidMatrix(matrixB)) {
+            if (isWrongMatrix(matrixA) || isWrongMatrix(matrixB)) {
                 return;
             }
 
@@ -20,7 +20,7 @@ public class Lab2 {
             printMatrix(resultMatrix);
 
             System.out.println("\nAverage value of elements in each row of matrix C:");
-            calculateAndPrintRowAverages(resultMatrix);
+            findRowAverage(resultMatrix);
 
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
@@ -46,7 +46,7 @@ public class Lab2 {
         return resultMatrix;
     }
 
-    private static void calculateAndPrintRowAverages(short[][] matrix) {
+    private static void findRowAverage(short[][] matrix) {
         for (short[] row : matrix) {
             double rowSum = 0;
             for (short element : row) {
@@ -57,10 +57,10 @@ public class Lab2 {
         }
     }
 
-    private static boolean isValidMatrix(short[][] matrix) {
+    private static boolean isWrongMatrix(short[][] matrix) {
         if (matrix.length == 0 || matrix[0].length == 0) {
             System.err.println("Error: Empty matrix");
-            return false;
+            return true;
         }
 
         int rowLength = matrix[0].length;
@@ -72,7 +72,7 @@ public class Lab2 {
             }
         }
 
-        return true;
+        return false;
     }
 
     private static void printMatrix(short[][] matrix) {
