@@ -40,7 +40,10 @@ public class Lab2 {
         }
 
         for (int i = 0; i < rowsB; i++) {
-            System.arraycopy(matrixB[i], 0, resultMatrix[i + rowsA], colsA, colsB);
+//            System.arraycopy(matrixB[i], 0, resultMatrix[i + rowsA], colsA, colsB);
+            for (int j = 0; j < colsB; j++) {
+                resultMatrix[i + rowsA][j + colsA] = matrixB[i][j];
+            }
         }
 
         return resultMatrix;
