@@ -7,7 +7,7 @@ public class Lab3 {
 
     public static void main(String[] args) {
         try {
-            StringBuffer text = new StringBuffer("This a is test test message? Yes, with some test words. Test, Are you sure?");
+            StringBuffer text = new StringBuffer("This a is test test message? Yes, with some test words. TESt, Are you sure?");
             int wordLength = 4;
 
             validateText(text);
@@ -47,7 +47,7 @@ public class Lab3 {
 
     private static boolean contains(List<StringBuffer> list, StringBuffer word) {
         for (StringBuffer sb : list) {
-            if (sb.toString().equals(word.toString().toLowerCase())) {
+            if (sb.toString().contentEquals(word)) {
                 return true;
             }
         }
@@ -72,7 +72,7 @@ public class Lab3 {
         Matcher matcher = pattern.matcher(sentence);
 
         while (matcher.find()) {
-            words.add(new StringBuffer(matcher.group()));
+            words.add(new StringBuffer(matcher.group().toLowerCase()));
         }
 
         return words;
