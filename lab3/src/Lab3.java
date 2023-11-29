@@ -7,7 +7,7 @@ public class Lab3 {
 
     public static void main(String[] args) {
         try {
-            StringBuffer text = new StringBuffer("This a is test test message? Yes, with some test words. Are you sure?");
+            StringBuffer text = new StringBuffer("This a is test test message? Yes, with some test words. Test, Are you sure?");
             int wordLength = 4;
 
             validateText(text);
@@ -47,7 +47,7 @@ public class Lab3 {
 
     private static boolean contains(List<StringBuffer> list, StringBuffer word) {
         for (StringBuffer sb : list) {
-            if (sb.toString().contentEquals(word)) {
+            if (sb.toString().equals(word.toString().toLowerCase())) {
                 return true;
             }
         }
