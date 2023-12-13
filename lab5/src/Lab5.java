@@ -45,10 +45,12 @@ public class Lab5 {
         List<Word> words = new ArrayList<>();
 
         for (Sentence sentence : text.getSentences()) {
-            for (Object element : sentence.getElements()) {
-                if (element instanceof Word word) {
-                    if (word.getLength() == wordLength && !contains(words, word)) {
-                        words.add(word);
+            if (sentence.isQuestion(sentence)) {
+                for (Object element : sentence.getElements()) {
+                    if (element instanceof Word word) {
+                        if (word.getLength() == wordLength && !contains(words, word)) {
+                            words.add(word);
+                        }
                     }
                 }
             }

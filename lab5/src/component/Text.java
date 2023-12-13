@@ -37,7 +37,7 @@ public class Text {
      */
     public List<Sentence> getSentences() {
         List<Sentence> sentences = new ArrayList<>();
-        Pattern sentencePattern = Pattern.compile("[^.!?]+[?]");
+        Pattern sentencePattern = Pattern.compile("[^.!?]+[.!?]");
         Matcher sentenceMatcher = sentencePattern.matcher(text);
 
         while (sentenceMatcher.find()) {

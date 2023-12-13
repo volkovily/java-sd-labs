@@ -52,4 +52,13 @@ public class Sentence {
 
         return new Sentence(elements);
     }
+
+    public boolean isQuestion(Sentence sentence) {
+        for (Object element : sentence.getElements()) {
+            if (element instanceof Punctuation punctuation && punctuation.getValue() == '?') {
+                return true;
+            }
+        }
+        return false;
+    }
 }
