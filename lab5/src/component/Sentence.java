@@ -53,6 +53,11 @@ public class Sentence {
         return new Sentence(elements);
     }
 
+    /**
+     * Checks if the sentence is a question.
+     *
+     * @return true if the sentence contains a question mark, false otherwise.
+     */
     public boolean isQuestion(Sentence sentence) {
         for (Object element : sentence.getElements()) {
             if (element instanceof Punctuation punctuation && punctuation.getValue() == '?') {
