@@ -1,3 +1,5 @@
+package salad;
+
 import list.VegetableList;
 import vegetable.Vegetable;
 

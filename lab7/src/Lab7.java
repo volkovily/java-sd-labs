@@ -1,4 +1,5 @@
 import list.VegetableList;
+import salad.Salad;
 import vegetable.Carrot;
 import vegetable.Cucumber;
 import vegetable.Tomato;
@@ -10,9 +11,9 @@ import vegetable.Vegetable;
 public class Lab7 {
     // C13=3 C2=0 C3=1
     public static void main(String[] args) {
-        Tomato tomato = new Tomato();
-        Cucumber cucumber = new Cucumber();
-        Carrot carrot = new Carrot();
+        Tomato tomato = new Tomato("Tomato", 20);
+        Cucumber cucumber = new Cucumber("Cucumber", 15);
+        Carrot carrot = new Carrot("Carrot", 30);
 
         Salad salad = new Salad();
         salad.addVegetable(tomato);
