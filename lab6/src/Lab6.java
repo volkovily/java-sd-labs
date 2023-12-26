@@ -11,9 +11,9 @@ import java.util.ArrayList;
 public class Lab6 {
     // C13=3
     public static void main(String[] args) {
-        Tomato tomato = new Tomato();
-        Cucumber cucumber = new Cucumber();
-        Carrot carrot = new Carrot();
+        Tomato tomato = new Tomato("Tomato", 20);
+        Cucumber cucumber = new Cucumber("Cucumber", 15);
+        Carrot carrot = new Carrot("Carrot", 30);
 
         Salad salad = new Salad();
         salad.addVegetable(tomato);

@@ -8,7 +8,7 @@ public class Tomato extends Vegetable {
     /**
      * Constructs a tomato with some values.
      */
-    public Tomato() {
-        super("Tomato", 20);
+    public Tomato(String name, int calories) {
+        super(name, calories);
     }
 }
